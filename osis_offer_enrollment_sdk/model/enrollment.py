@@ -81,7 +81,7 @@ class Enrollment(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'program': (str,),  # noqa: E501
+            'acronym': (str,),  # noqa: E501
             'year': (int,),  # noqa: E501
             'title': (str, none_type,),  # noqa: E501
         }
@@ -92,7 +92,7 @@ class Enrollment(ModelNormal):
 
 
     attribute_map = {
-        'program': 'program',  # noqa: E501
+        'acronym': 'acronym',  # noqa: E501
         'year': 'year',  # noqa: E501
         'title': 'title',  # noqa: E501
     }
@@ -138,7 +138,7 @@ class Enrollment(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            program (str): [optional]  # noqa: E501
+            acronym (str): [optional]  # noqa: E501
             year (int): [optional]  # noqa: E501
             title (str, none_type): [optional]  # noqa: E501
         """
@@ -222,7 +222,7 @@ class Enrollment(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            program (str): [optional]  # noqa: E501
+            acronym (str): [optional]  # noqa: E501
             year (int): [optional]  # noqa: E501
             title (str, none_type): [optional]  # noqa: E501
         """

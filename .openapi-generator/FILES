@@ -1,6 +1,5 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/AcceptedLanguageEnum.md
@@ -33,11 +32,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_accepted_language_enum.py
-test/test_enrollment.py
-test/test_enrollment_api.py
-test/test_enrollment_list.py
-test/test_enrollment_list_all_of.py
-test/test_error.py
-test/test_paging.py
 tox.ini
