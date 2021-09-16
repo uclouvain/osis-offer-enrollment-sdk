@@ -97,6 +97,7 @@ All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/offer_enrollment*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EnrollmentApi* | [**my_enrollments_list**](docs/EnrollmentApi.md#my_enrollments_list) | **GET** /my_enrollments/ | 
+*EnrollmentApi* | [**my_enrollments_year_list**](docs/EnrollmentApi.md#my_enrollments_year_list) | **GET** /my_enrollments/{year} | 
 
 
 ## Documentation For Models
