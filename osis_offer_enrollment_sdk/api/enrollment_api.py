@@ -53,6 +53,7 @@ class EnrollmentApi(object):
 
 
             Keyword Args:
+                enrollment_state ([str]): [optional]
                 accept_language (AcceptedLanguageEnum): The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.) . [optional]
                 x_user_first_name (str): [optional]
                 x_user_last_name (str): [optional]
@@ -119,6 +120,7 @@ class EnrollmentApi(object):
             },
             params_map={
                 'all': [
+                    'enrollment_state',
                     'accept_language',
                     'x_user_first_name',
                     'x_user_last_name',
@@ -141,6 +143,8 @@ class EnrollmentApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
+                    'enrollment_state':
+                        ([str],),
                     'accept_language':
                         (AcceptedLanguageEnum,),
                     'x_user_first_name':
@@ -157,6 +161,7 @@ class EnrollmentApi(object):
                         (int,),
                 },
                 'attribute_map': {
+                    'enrollment_state': 'enrollment_state',
                     'accept_language': 'Accept-Language',
                     'x_user_first_name': 'X-User-FirstName',
                     'x_user_last_name': 'X-User-LastName',
@@ -166,6 +171,7 @@ class EnrollmentApi(object):
                     'offset': 'offset',
                 },
                 'location_map': {
+                    'enrollment_state': 'query',
                     'accept_language': 'header',
                     'x_user_first_name': 'header',
                     'x_user_last_name': 'header',
@@ -175,6 +181,7 @@ class EnrollmentApi(object):
                     'offset': 'query',
                 },
                 'collection_format_map': {
+                    'enrollment_state': 'multi',
                 }
             },
             headers_map={
