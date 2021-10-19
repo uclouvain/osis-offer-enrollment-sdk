@@ -75,7 +75,8 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_offer_enrollment_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = enrollment_api.EnrollmentApi(api_client)
-    enrollment_state = [
+    registration_id = "registration_id_example" # str | 
+enrollment_state = [
         "enrollment_state_example",
     ] # [str] |  (optional)
 accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
@@ -87,10 +88,10 @@ limit = 25 # int | Limit of paginated results (optional)
 offset = 25 # int | Offset of paginated results (optional)
 
     try:
-        api_response = api_instance.my_enrollments_list(enrollment_state=enrollment_state, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id, limit=limit, offset=offset)
+        api_response = api_instance.enrollments_list(registration_id, enrollment_state=enrollment_state, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id, limit=limit, offset=offset)
         pprint(api_response)
     except osis_offer_enrollment_sdk.ApiException as e:
-        print("Exception when calling EnrollmentApi->my_enrollments_list: %s\n" % e)
+        print("Exception when calling EnrollmentApi->enrollments_list: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -99,6 +100,7 @@ All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/offer_enrollment*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*EnrollmentApi* | [**enrollments_list**](docs/EnrollmentApi.md#enrollments_list) | **GET** /enrollments/{registration_id} | 
 *EnrollmentApi* | [**my_enrollments_list**](docs/EnrollmentApi.md#my_enrollments_list) | **GET** /my_enrollments/ | 
 *EnrollmentApi* | [**my_enrollments_year_list**](docs/EnrollmentApi.md#my_enrollments_year_list) | **GET** /my_enrollments/{year} | 
 

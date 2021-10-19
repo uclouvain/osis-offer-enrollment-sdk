@@ -762,10 +762,10 @@ class Endpoint(object):
         Example:
 
         api_instance = EnrollmentApi()
-        api_instance.my_enrollments_list  # this is an instance of the class Endpoint
-        api_instance.my_enrollments_list()  # this invokes api_instance.my_enrollments_list.__call__()
+        api_instance.enrollments_list  # this is an instance of the class Endpoint
+        api_instance.enrollments_list()  # this invokes api_instance.enrollments_list.__call__()
         which then invokes the callable functions stored in that endpoint at
-        api_instance.my_enrollments_list.callable or self.callable in this class
+        api_instance.enrollments_list.callable or self.callable in this class
 
         """
         return self.callable(self, *args, **kwargs)
